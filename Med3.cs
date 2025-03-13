@@ -32,6 +32,9 @@ namespace Loaj_dhe_Meso
 
                 failedAttempts++;
 
+                MessageBox.Show($"Incorrect answer. Please try again. \nNr of failed Attempts : {failedAttempts}", "Deshtim", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
                 if (failedAttempts >= 3)
                 {
                     answerBtn.Enabled = true;
@@ -44,7 +47,7 @@ namespace Loaj_dhe_Meso
                 }
 
 
-                MessageBox.Show("Incorrect answer. Please try again.");
+               
             }
         }
 
