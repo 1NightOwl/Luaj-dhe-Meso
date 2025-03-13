@@ -36,6 +36,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.answerLbl = new System.Windows.Forms.Label();
+            this.answerBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,11 +105,38 @@
             this.errorProvider1.BlinkRate = 100;
             this.errorProvider1.ContainerControl = this;
             // 
+            // answerLbl
+            // 
+            this.answerLbl.AutoSize = true;
+            this.answerLbl.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerLbl.Location = new System.Drawing.Point(47, 445);
+            this.answerLbl.Name = "answerLbl";
+            this.answerLbl.Size = new System.Drawing.Size(313, 19);
+            this.answerLbl.TabIndex = 20;
+            this.answerLbl.Text = "Pergjigje: SHQIPONJA NUK GJUAN MIZA";
+            this.answerLbl.Visible = false;
+            // 
+            // answerBtn
+            // 
+            this.answerBtn.BackColor = System.Drawing.Color.Brown;
+            this.answerBtn.Enabled = false;
+            this.answerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.answerBtn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerBtn.Location = new System.Drawing.Point(99, 386);
+            this.answerBtn.Name = "answerBtn";
+            this.answerBtn.Size = new System.Drawing.Size(139, 33);
+            this.answerBtn.TabIndex = 19;
+            this.answerBtn.Text = "Shiko pergjigjen";
+            this.answerBtn.UseVisualStyleBackColor = false;
+            this.answerBtn.Click += new System.EventHandler(this.answerBtn_Click);
+            // 
             // Med3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
+            this.Controls.Add(this.answerLbl);
+            this.Controls.Add(this.answerBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -132,5 +161,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label answerLbl;
+        private System.Windows.Forms.Button answerBtn;
     }
 }

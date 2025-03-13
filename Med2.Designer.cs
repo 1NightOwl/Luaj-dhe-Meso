@@ -37,6 +37,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.answerBtn = new System.Windows.Forms.Button();
+            this.answerLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +115,38 @@
             this.errorProvider1.BlinkRate = 100;
             this.errorProvider1.ContainerControl = this;
             // 
+            // answerBtn
+            // 
+            this.answerBtn.BackColor = System.Drawing.Color.Brown;
+            this.answerBtn.Enabled = false;
+            this.answerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.answerBtn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerBtn.Location = new System.Drawing.Point(101, 386);
+            this.answerBtn.Name = "answerBtn";
+            this.answerBtn.Size = new System.Drawing.Size(139, 33);
+            this.answerBtn.TabIndex = 17;
+            this.answerBtn.Text = "Shiko pergjigjen";
+            this.answerBtn.UseVisualStyleBackColor = false;
+            this.answerBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // answerLbl
+            // 
+            this.answerLbl.AutoSize = true;
+            this.answerLbl.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerLbl.Location = new System.Drawing.Point(26, 442);
+            this.answerLbl.Name = "answerLbl";
+            this.answerLbl.Size = new System.Drawing.Size(388, 19);
+            this.answerLbl.TabIndex = 18;
+            this.answerLbl.Text = "Pergjigje: DUAJE ATDHENE SI SHQIPONJA FOLENE";
+            this.answerLbl.Visible = false;
+            // 
             // Med2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
+            this.Controls.Add(this.answerLbl);
+            this.Controls.Add(this.answerBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -144,5 +173,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button answerBtn;
+        private System.Windows.Forms.Label answerLbl;
     }
 }

@@ -82,6 +82,18 @@
     <Compile Include="Hard.Designer.cs">
       <DependentUpon>Hard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hard1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hard1.Designer.cs">
+      <DependentUpon>Hard1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hard2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hard2.Designer.cs">
+      <DependentUpon>Hard2.cs</DependentUpon>
+    </Compile>
     <Compile Include="IAnswerCheck.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hard.resx">
       <DependentUpon>Hard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hard1.resx">
+      <DependentUpon>Hard1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hard2.resx">
+      <DependentUpon>Hard2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -209,6 +227,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\med3.3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\shqiponja.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

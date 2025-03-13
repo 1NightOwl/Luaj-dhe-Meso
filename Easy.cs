@@ -62,10 +62,10 @@ namespace Loaj_dhe_Meso
         {
             if (currentGameControl is IAnswerCheck answerCheck)
             {
-                // Check if the answer is correct
+                
                 if (answerCheck.IsAnswerCorrect())
                 {
-                    // Load the next game
+                    
                     if (currentGameControl is Easy1)
                     {
                         

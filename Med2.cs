@@ -12,6 +12,9 @@ namespace Loaj_dhe_Meso
 {
     public partial class Med2: UserControl, IAnswerCheck
     {
+        private int failedAttempts = 0;
+
+
         public Med2()
         {
             InitializeComponent();
@@ -27,6 +30,22 @@ namespace Loaj_dhe_Meso
             }
             else
             {
+
+                failedAttempts++;
+
+                if (failedAttempts >= 3)
+                {
+                    answerBtn.Enabled = true;
+                    MessageBox.Show(
+                    "Ju mund te aksesoni butonin e pergjigjes!",
+                    "Deshtim",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                    );
+                }
+
+
+
                 MessageBox.Show("Incorrect answer. Please try again.");
             }
         }
@@ -70,6 +89,11 @@ namespace Loaj_dhe_Meso
                      MessageBoxIcon.Information
                  );
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            answerLbl.Visible = true;
         }
     }
 }

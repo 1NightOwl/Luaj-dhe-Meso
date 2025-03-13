@@ -69,6 +69,7 @@ namespace Loaj_dhe_Meso
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+
             string userInput = textBox1.Text.ToUpper();
 
             if (userInput == "IDENTITET")

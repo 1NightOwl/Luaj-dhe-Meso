@@ -36,6 +36,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.nextBtn = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.LightSalmon;
+            this.panelTitle.Controls.Add(this.nextBtn);
             this.panelTitle.Controls.Add(this.label1);
             this.panelTitle.Controls.Add(this.button2);
             this.panelTitle.Controls.Add(this.button3);
@@ -112,11 +114,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(410, 35);
+            this.label1.Location = new System.Drawing.Point(536, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(438, 37);
+            this.label1.Size = new System.Drawing.Size(188, 37);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Loja e shkronjave te ngaterruara";
+            this.label1.Text = "Loja e fotove";
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBtn.Location = new System.Drawing.Point(918, 69);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(144, 35);
+            this.nextBtn.TabIndex = 11;
+            this.nextBtn.Text = "Next Game";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click_1);
             // 
             // Hard
             // 
@@ -149,5 +164,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button nextBtn;
     }
 }

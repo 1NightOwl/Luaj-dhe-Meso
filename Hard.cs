@@ -12,10 +12,38 @@ namespace Loaj_dhe_Meso
 {
     public partial class Hard: Form
     {
+        private UserControl currentGameControl;
+
+
         public Hard()
         {
             InitializeComponent();
+            LoadGameControl(new Hard1());
         }
+
+
+
+        public void LoadGameControl(UserControl gameControl)
+        {
+
+            if (currentGameControl != null)
+            {
+                panelGame.Controls.Remove(currentGameControl);
+                currentGameControl.Dispose();
+            }
+
+
+            currentGameControl = gameControl;
+            currentGameControl.Dock = DockStyle.Fill;
+            panelGame.Controls.Add(currentGameControl);
+        }
+
+
+        //private void nextBtn_Click(object sender, EventArgs e)
+        //{
+            
+        //}
+
 
         private void ext_Click(object sender, EventArgs e)
         {
@@ -49,6 +77,11 @@ namespace Loaj_dhe_Meso
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nextBtn_Click_1(object sender, EventArgs e)
+        {
+            LoadGameControl(new Hard2());
         }
     }
 }
