@@ -34,19 +34,19 @@ namespace Loaj_dhe_Meso
         { pictureBox7, pictureBox8, pictureBox9 }
             };
 
-           
+
             images = new List<Image>
-{
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s1.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s2.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s3.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s4.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s5.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s6.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s7.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s8.png"),
-    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s9.png")
-};
+            {
+                Properties.Resources.s1,
+                Properties.Resources.s2,
+                Properties.Resources.s3,
+                Properties.Resources.s4,
+                Properties.Resources.s5,
+                Properties.Resources.s6,
+                Properties.Resources.s7,
+                Properties.Resources.s8,
+                Properties.Resources.s9
+            };
 
             // Shto indeksin real të fotos si tag
             for (int i = 0; i < images.Count; i++)
