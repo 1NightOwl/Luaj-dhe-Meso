@@ -101,14 +101,14 @@ namespace Loaj_dhe_Meso
                         index++;
                     }
                 }
-                initialPositions.AppendLine(); // Shto rresht të ri
+                initialPositions.AppendLine();
             }
 
             txtInitialState.Text = initialPositions.ToString();
 
             if (!IsSolvable())
             {
-                //MessageBox.Show("Puzzle nuk është i zgjidhshëm. Do të përpiqemi përsëri.");
+               
                 Shuffle();
             }
         }

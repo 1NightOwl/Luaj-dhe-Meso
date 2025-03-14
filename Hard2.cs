@@ -188,17 +188,18 @@ namespace Loaj_dhe_Meso
         {
             // Map TextBoxes to their corresponding panels and images
             var panelMap = new Dictionary<System.Windows.Forms.TextBox, Action>
-    {
-        { tb1, () => { panel1.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m1.jpg"); p1.Visible = false; p2.Visible = true; tb1.Visible = false; tb2.Visible = true; } },
-        { tb2, () => { panel2.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m2.jpg"); p2.Visible = false; p3.Visible = true; tb2.Visible = false; tb3.Visible = true; } },
-        { tb3, () => { panel3.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m3.jpg"); tb3.Visible = false; fsh1.Visible = true; } },
-        { tb4, () => { panel4.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m4.jpg"); p4.Visible = false; p5.Visible = true; tb4.Visible = false; tb5.Visible = true; } },
-        { tb5, () => { panel5.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m5.jpg"); p5.Visible = false; p6.Visible = true; tb5.Visible = false; tb6.Visible = true; } },
-        { tb6, () => { panel6.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m6.jpg"); tb6.Visible = false; fsh2.Visible = true; } },
-        { tb7, () => { panel7.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m7.jpg"); p7.Visible = false; p8.Visible = true; tb7.Visible = false; tb8.Visible = true; } },
-        { tb8, () => { panel8.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m8.jpg"); p8.Visible = false; p9.Visible = true; tb8.Visible = false; tb9.Visible = true; } },
-        { tb9, () => { panel9.BackgroundImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\m9.jpg"); tb9.Visible = false; fsh3.Visible = true; } }
-    };
+            {
+                { tb1, () => { panel1.BackgroundImage = Properties.Resources.m1; p1.Visible = false; p2.Visible = true; tb1.Visible = false; tb2.Visible = true; } },
+                { tb2, () => { panel2.BackgroundImage = Properties.Resources.m2; p2.Visible = false; p3.Visible = true; tb2.Visible = false; tb3.Visible = true; } },
+                { tb3, () => { panel3.BackgroundImage = Properties.Resources.m3; tb3.Visible = false; fsh1.Visible = true; } },
+                { tb4, () => { panel4.BackgroundImage = Properties.Resources.m4; p4.Visible = false; p5.Visible = true; tb4.Visible = false; tb5.Visible = true; } },
+                { tb5, () => { panel5.BackgroundImage = Properties.Resources.m5; p5.Visible = false; p6.Visible = true; tb5.Visible = false; tb6.Visible = true; } },
+                { tb6, () => { panel6.BackgroundImage = Properties.Resources.m6; tb6.Visible = false; fsh2.Visible = true; } },
+                { tb7, () => { panel7.BackgroundImage = Properties.Resources.m7; p7.Visible = false; p8.Visible = true; tb7.Visible = false; tb8.Visible = true; } },
+                { tb8, () => { panel8.BackgroundImage = Properties.Resources.m8; p8.Visible = false; p9.Visible = true; tb8.Visible = false; tb9.Visible = true; } },
+                { tb9, () => { panel9.BackgroundImage = Properties.Resources.m9; tb9.Visible = false; fsh3.Visible = true; } }
+            };
+
 
             // Execute the corresponding action for the TextBox
             if (panelMap.ContainsKey(textBox))

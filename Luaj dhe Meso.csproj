@@ -302,20 +302,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
-    <Content Include="Resources\m1.jpg" />
-    <Content Include="Resources\m2.jpg" />
-    <Content Include="Resources\m3.jpg" />
-    <Content Include="Resources\m4.jpg" />
-    <Content Include="Resources\m5.jpg" />
-    <Content Include="Resources\m6.jpg" />
-    <Content Include="Resources\m7.jpg" />
-    <Content Include="Resources\m8.jpg" />
-    <Content Include="Resources\m9.jpg" />
     <None Include="Resources\shqiponja1.jpeg" />
     <None Include="Resources\med4.png" />
     <None Include="Resources\med5.1.png" />
     <None Include="Resources\med5.2.png" />
     <None Include="Resources\med5.3.png" />
+    <None Include="Resources\m1.bmp" />
+    <None Include="Resources\m1.png" />
+    <None Include="Resources\m8.png" />
+    <None Include="Resources\m7.png" />
+    <None Include="Resources\m6.png" />
+    <None Include="Resources\m5.png" />
+    <None Include="Resources\m4.png" />
+    <None Include="Resources\m3.png" />
+    <None Include="Resources\m2.png" />
+    <None Include="Resources\m9.png" />
     <Content Include="Resources\shqiponja.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
