@@ -32,9 +32,9 @@
             this.ext = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.nextBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelGame = new System.Windows.Forms.Panel();
-            this.nextBtn = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,19 @@
             this.panelTitle.Size = new System.Drawing.Size(1258, 107);
             this.panelTitle.TabIndex = 9;
             // 
+            // nextBtn
+            // 
+            this.nextBtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBtn.Location = new System.Drawing.Point(920, 69);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(144, 35);
+            this.nextBtn.TabIndex = 10;
+            this.nextBtn.Text = "Niveli Tjeter";
+            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -83,7 +96,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(438, 37);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Loja e shkronjave te ngaterruara";
+            this.label1.Text = "Loja e shkronjave të ngatërruara";
             // 
             // panelGame
             // 
@@ -94,19 +107,6 @@
             this.panelGame.Size = new System.Drawing.Size(1258, 554);
             this.panelGame.TabIndex = 10;
             this.panelGame.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGame_Paint);
-            // 
-            // nextBtn
-            // 
-            this.nextBtn.BackColor = System.Drawing.Color.ForestGreen;
-            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(920, 69);
-            this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(144, 35);
-            this.nextBtn.TabIndex = 10;
-            this.nextBtn.Text = "Next Game";
-            this.nextBtn.UseVisualStyleBackColor = false;
-            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // Easy
             // 

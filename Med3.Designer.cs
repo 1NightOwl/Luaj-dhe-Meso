@@ -61,7 +61,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(367, 22);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Vendosni fjalen e urte te sakte brenda ne kuti!";
+            this.label3.Text = "Vendosni fjalën e urtë të saktë brenda në kuti!";
             // 
             // textBox1
             // 
@@ -113,7 +113,7 @@
             this.answerLbl.Name = "answerLbl";
             this.answerLbl.Size = new System.Drawing.Size(313, 19);
             this.answerLbl.TabIndex = 20;
-            this.answerLbl.Text = "Pergjigje: SHQIPONJA NUK GJUAN MIZA";
+            this.answerLbl.Text = "Përgjigje: SHQIPONJA NUK GJUAN MIZA";
             this.answerLbl.Visible = false;
             // 
             // answerBtn
@@ -126,7 +126,7 @@
             this.answerBtn.Name = "answerBtn";
             this.answerBtn.Size = new System.Drawing.Size(139, 33);
             this.answerBtn.TabIndex = 19;
-            this.answerBtn.Text = "Shiko pergjigjen";
+            this.answerBtn.Text = "Shiko përgjigjen";
             this.answerBtn.UseVisualStyleBackColor = false;
             this.answerBtn.Click += new System.EventHandler(this.answerBtn_Click);
             // 

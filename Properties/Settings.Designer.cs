@@ -22,5 +22,17 @@ namespace Loaj_dhe_Meso.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LastCompletedMediumLevel {
+            get {
+                return ((int)(this["LastCompletedMediumLevel"]));
+            }
+            set {
+                this["LastCompletedMediumLevel"] = value;
+            }
+        }
     }
 }

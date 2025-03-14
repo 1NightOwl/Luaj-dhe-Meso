@@ -72,7 +72,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(533, 32);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Ploteso imazhin duke iu pergjigjur pyetjeve";
+            this.label1.Text = "Plotëso imazhin duke iu përgjigjur pyetjeve";
             // 
             // panel1
             // 
@@ -159,17 +159,17 @@
             // 
             this.p1.AutoSize = true;
             this.p1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p1.Location = new System.Drawing.Point(95, 101);
+            this.p1.Location = new System.Drawing.Point(84, 101);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(355, 22);
             this.p1.TabIndex = 6;
-            this.p1.Text = "Cili eshte dokumenti i pare i gjuhes shqipe?";
+            this.p1.Text = "Cili është dokumenti i parë i gjuhës shqipe?";
             // 
             // p2
             // 
             this.p2.AutoSize = true;
             this.p2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p2.Location = new System.Drawing.Point(123, 101);
+            this.p2.Location = new System.Drawing.Point(115, 101);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(286, 22);
             this.p2.TabIndex = 7;
@@ -184,7 +184,7 @@
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(371, 22);
             this.p3.TabIndex = 8;
-            this.p3.Text = "Cili eshte kufiri i ndares midis dy dialekteve?";
+            this.p3.Text = "Cili është kufiri i ndarës midis dy dialekteve?";
             this.p3.Visible = false;
             // 
             // p4
@@ -195,17 +195,17 @@
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(269, 22);
             this.p4.TabIndex = 9;
-            this.p4.Text = "Kur u hap shkolla e pare shqipe?";
+            this.p4.Text = "Kur u hap shkolla e parë shqipe?";
             // 
             // p5
             // 
             this.p5.AutoSize = true;
             this.p5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p5.Location = new System.Drawing.Point(84, 247);
+            this.p5.Location = new System.Drawing.Point(93, 247);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(347, 22);
             this.p5.TabIndex = 10;
-            this.p5.Text = "Cili eshte autori i abetares se pare shqipe?";
+            this.p5.Text = "Cili është autori i abetares së parë shqipe?";
             this.p5.Visible = false;
             this.p5.Click += new System.EventHandler(this.p5_Click);
             // 
@@ -213,7 +213,7 @@
             // 
             this.p6.AutoSize = true;
             this.p6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p6.Location = new System.Drawing.Point(111, 247);
+            this.p6.Location = new System.Drawing.Point(117, 247);
             this.p6.Name = "p6";
             this.p6.Size = new System.Drawing.Size(310, 22);
             this.p6.TabIndex = 11;
@@ -229,24 +229,24 @@
             this.p7.Name = "p7";
             this.p7.Size = new System.Drawing.Size(309, 22);
             this.p7.TabIndex = 12;
-            this.p7.Text = "Cili eshte autori i librit te pare shqip?";
+            this.p7.Text = "Cili është autori i librit të parë shqip?";
             // 
             // p8
             // 
             this.p8.AutoSize = true;
             this.p8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p8.Location = new System.Drawing.Point(76, 394);
+            this.p8.Location = new System.Drawing.Point(60, 394);
             this.p8.Name = "p8";
             this.p8.Size = new System.Drawing.Size(412, 22);
             this.p8.TabIndex = 13;
-            this.p8.Text = "Ne cilen familje gjuhesore ben pjese gjuha shqipe?";
+            this.p8.Text = "Në cilën familje gjuhësore bën pjesë gjuha shqipe?";
             this.p8.Visible = false;
             // 
             // p9
             // 
             this.p9.AutoSize = true;
             this.p9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p9.Location = new System.Drawing.Point(111, 394);
+            this.p9.Location = new System.Drawing.Point(117, 394);
             this.p9.Name = "p9";
             this.p9.Size = new System.Drawing.Size(284, 22);
             this.p9.TabIndex = 14;

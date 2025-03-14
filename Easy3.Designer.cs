@@ -45,7 +45,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(313, 22);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Vendosni fjalen e sakte brenda ne kuti!";
+            this.label3.Text = "Vendosni fjalën e saktë brenda në kuti!";
             // 
             // textBox1
             // 
@@ -97,6 +97,7 @@
             this.Controls.Add(this.submitBtn);
             this.Name = "Easy3";
             this.Size = new System.Drawing.Size(1258, 554);
+            this.Load += new System.EventHandler(this.Easy3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

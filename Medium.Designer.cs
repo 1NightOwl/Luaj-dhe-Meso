@@ -120,7 +120,7 @@
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(144, 35);
             this.nextBtn.TabIndex = 12;
-            this.nextBtn.Text = "Next Game";
+            this.nextBtn.Text = "Niveli Tjeter";
             this.nextBtn.UseVisualStyleBackColor = false;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
@@ -132,7 +132,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 37);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Loja e fjaleve te urta";
+            this.label1.Text = "Loja e fjalëve të urta";
             // 
             // Medium
             // 

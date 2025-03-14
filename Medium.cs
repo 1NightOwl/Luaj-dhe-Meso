@@ -12,12 +12,42 @@ namespace Loaj_dhe_Meso
 {
     public partial class Medium: Form
     {
+        private static int sessionLastCompletedLevel = 0;
 
         private UserControl currentGameControl;
+        private int lastCompletedLevel;
         public Medium()
         {
             InitializeComponent();
-            LoadGameControl(new Med1());
+
+            lastCompletedLevel = sessionLastCompletedLevel;
+
+
+            switch (lastCompletedLevel)
+            {
+                case 1:
+                    LoadGameControl(new Med2());
+                    break;
+                case 2:
+                    LoadGameControl(new Med3());
+                    break;
+                case 3:
+                    LoadGameControl(new Med4());
+                    break;
+                case 4:
+                    LoadGameControl(new Med5());
+                    break;
+                case 5:
+                    LoadGameControl(new End());
+                    nextBtn.Visible = false;
+                    break;
+                default:
+                    LoadGameControl(new Med1());
+                    break;
+            }
+
+
+
         }
 
 
@@ -27,6 +57,7 @@ namespace Loaj_dhe_Meso
             if (currentGameControl != null)
             {
                 panelGame.Controls.Remove(currentGameControl);
+                lastCompletedLevel = Properties.Settings.Default.LastCompletedMediumLevel;
                 currentGameControl.Dispose();
             }
 
@@ -34,6 +65,16 @@ namespace Loaj_dhe_Meso
             currentGameControl = gameControl;
             currentGameControl.Dock = DockStyle.Fill;
             panelGame.Controls.Add(currentGameControl);
+
+
+            if (currentGameControl is Med5 med5)
+            {
+                med5.AnswerCorrect += () =>
+                {
+                    LoadGameControl(new End());
+                    nextBtn.Visible = false;
+                };
+            }
         }
 
 
@@ -74,6 +115,7 @@ namespace Loaj_dhe_Meso
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void panelGame_Paint(object sender, PaintEventArgs e)
@@ -81,28 +123,64 @@ namespace Loaj_dhe_Meso
 
         }
 
+        public void SetSessionLastCompletedLevel(int level)
+        {
+            sessionLastCompletedLevel = level;
+        }
+
         private void nextBtn_Click(object sender, EventArgs e)
         {
             if (currentGameControl is IAnswerCheck answerCheck)
             {
-                // Check if the answer is correct
                 if (answerCheck.IsAnswerCorrect())
                 {
-                    // Load the next game
                     if (currentGameControl is Med1)
                     {
-
-                        LoadGameControl(new Med2());
+                        sessionLastCompletedLevel = 1;
                     }
                     else if (currentGameControl is Med2)
                     {
+                        sessionLastCompletedLevel = 2;
+                    }
+                    else if (currentGameControl is Med3)
+                    {
+                        sessionLastCompletedLevel = 3;
+                    }
+                    else if (currentGameControl is Med4)
+                    {
+                        sessionLastCompletedLevel = 4;
+                    }
+                    else if (currentGameControl is Med5)
+                    {
+                        sessionLastCompletedLevel = 5;
+                    }
 
+
+                    if (sessionLastCompletedLevel == 1)
+                    {
+                        LoadGameControl(new Med2());
+                    }
+                    else if (sessionLastCompletedLevel == 2)
+                    {
                         LoadGameControl(new Med3());
                     }
+                    else if (sessionLastCompletedLevel == 3)
+                    {
+                        LoadGameControl(new Med4());
+                    }
+                    else if (sessionLastCompletedLevel == 4)
+                    {
+                        LoadGameControl(new Med5());
+                    }
+                    else if (sessionLastCompletedLevel == 5)
+                    {
+                        LoadGameControl(new End());
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect answer. Please try again.");
+                    MessageBox.Show("Përgjigje e gabuar. Ju lutem provoni përsëri.");
                 }
             }
 

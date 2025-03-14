@@ -27,7 +27,7 @@ namespace Loaj_dhe_Meso
             }
             else
             {
-                MessageBox.Show("Incorrect answer. Please try again.");
+                MessageBox.Show("Përgjigje e gabuar. Ju lutem provoni përsëri.");
             }
         }
 
@@ -41,7 +41,7 @@ namespace Loaj_dhe_Meso
 
             if (textBox1.Text == null || userInput != "SHQIPTAR")
             {
-                errorProvider1.SetError(textBox1, "Answer is missing or incorrect!");
+                errorProvider1.SetError(textBox1, "Përgjigja mungon ose është e pasaktë!");
                 return false;
             }
             return true;
@@ -65,12 +65,17 @@ namespace Loaj_dhe_Meso
             if (userInput == "SHQIPTAR")
             {
                 MessageBox.Show(
-                     "Ju e perfunduat lojen me sukses!",
-                     "Sukses",
-                     MessageBoxButtons.OK,
-                     MessageBoxIcon.Information
-                 );
+                    "Fjala eshte gjetur sakte, kaloni ne nivelin tjeter!",
+                    "Sukses",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );               
             }
+        }
+
+        private void Easy3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

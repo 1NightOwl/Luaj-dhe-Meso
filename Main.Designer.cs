@@ -69,7 +69,7 @@
             this.easyBtn.Name = "easyBtn";
             this.easyBtn.Size = new System.Drawing.Size(160, 42);
             this.easyBtn.TabIndex = 2;
-            this.easyBtn.Text = "I Thjeshte";
+            this.easyBtn.Text = "I thjeshtë";
             this.easyBtn.UseVisualStyleBackColor = false;
             this.easyBtn.Click += new System.EventHandler(this.easyBtn_Click);
             // 
@@ -95,7 +95,7 @@
             this.hardBtn.Name = "hardBtn";
             this.hardBtn.Size = new System.Drawing.Size(160, 42);
             this.hardBtn.TabIndex = 4;
-            this.hardBtn.Text = "I veshtire";
+            this.hardBtn.Text = "I Vështirë";
             this.hardBtn.UseVisualStyleBackColor = false;
             this.hardBtn.Click += new System.EventHandler(this.hardBtn_Click);
             // 

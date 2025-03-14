@@ -10,17 +10,13 @@ using System.Windows.Forms;
 
 namespace Loaj_dhe_Meso
 {
-    public partial class Med2: UserControl, IAnswerCheck
+    public partial class Easy4: UserControl, IAnswerCheck
     {
-        private int failedAttempts = 0;
-
-
-        public Med2()
+        public Easy4()
         {
             InitializeComponent();
             submitBtn.Click += (sender, e) => CheckAnswer(textBox1.Text);
         }
-
 
         private void CheckAnswer(string userAnswer)
         {
@@ -30,28 +26,10 @@ namespace Loaj_dhe_Meso
             }
             else
             {
-
-                failedAttempts++;
-
-                MessageBox.Show($"Përgjigje e pasaktë. Ju lutem provoni përsëri. \nNumri i përpjekjeve të dështuara : {failedAttempts}", "Deshtim", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                if (failedAttempts >= 3)
-                {
-                    answerBtn.Enabled = true;
-                    MessageBox.Show(
-                    "Ju mund te aksesoni butonin e pergjigjes!",
-                    "Deshtim",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                    );
-                }
-
-
-
-                
+                MessageBox.Show("Përgjigje e gabuar. Ju lutem provoni përsëri.");
             }
         }
+
 
 
 
@@ -59,9 +37,11 @@ namespace Loaj_dhe_Meso
         {
             errorProvider1.SetError(textBox1, string.Empty);
 
+
             string userInput = textBox1.Text.ToUpper();
 
-            if (textBox1.Text == null || userInput != "DUAJE ATDHENE SI SHQIPONJA FOLENE")
+
+            if (textBox1.Text == null || userInput != "MALESOR")
             {
                 errorProvider1.SetError(textBox1, "Përgjigja mungon ose është e pasaktë!");
                 return false;
@@ -73,17 +53,17 @@ namespace Loaj_dhe_Meso
 
 
 
-
-        private void Med2_Load(object sender, EventArgs e)
+        private void Easy4_Load(object sender, EventArgs e)
         {
 
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+
             string userInput = textBox1.Text.ToUpper();
 
-            if (userInput == "DUAJE ATDHENE SI SHQIPONJA FOLENE")
+            if (userInput == "MALESOR")
             {
                 MessageBox.Show(
                      "Fjala eshte gjetur sakte, kaloni ne nivelin tjeter!",
@@ -92,11 +72,6 @@ namespace Loaj_dhe_Meso
                      MessageBoxIcon.Information
                  );
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            answerLbl.Visible = true;
         }
     }
 }

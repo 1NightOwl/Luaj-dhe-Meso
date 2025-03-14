@@ -31,7 +31,7 @@ namespace Loaj_dhe_Meso
 
                 failedAttempts++;
 
-                MessageBox.Show($"Incorrect answer. Please try again. \nNr of failed Attempts : {failedAttempts}", "Deshtim", MessageBoxButtons.OK,
+                MessageBox.Show($"Përgjigje e pasaktë. Ju lutem provoni përsëri. \nNumri i përpjekjeve të dështuara : {failedAttempts}", "Deshtim", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 if (failedAttempts >= 3)
@@ -61,7 +61,7 @@ namespace Loaj_dhe_Meso
               userInput != "GUR GUR BEHET MUR" &&
                userInput != "GURI I RENDE NE VEND TE VET"))
             {
-                errorProvider1.SetError(textBox1, "Answer is missing or incorrect!");
+                errorProvider1.SetError(textBox1, "Përgjigja mungon ose është e pasaktë!");
                 return false;
             }
 

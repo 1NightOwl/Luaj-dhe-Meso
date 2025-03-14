@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace Loaj_dhe_Meso
 {
-    public partial class Med2: UserControl, IAnswerCheck
+    public partial class Med4: UserControl, IAnswerCheck
     {
+
         private int failedAttempts = 0;
-
-
-        public Med2()
+        public Med4()
         {
             InitializeComponent();
             submitBtn.Click += (sender, e) => CheckAnswer(textBox1.Text);
         }
-
 
         private void CheckAnswer(string userAnswer)
         {
@@ -48,12 +46,8 @@ namespace Loaj_dhe_Meso
                 }
 
 
-
-                
             }
         }
-
-
 
         public bool IsAnswerCorrect()
         {
@@ -61,7 +55,8 @@ namespace Loaj_dhe_Meso
 
             string userInput = textBox1.Text.ToUpper();
 
-            if (textBox1.Text == null || userInput != "DUAJE ATDHENE SI SHQIPONJA FOLENE")
+            if (string.IsNullOrEmpty(userInput) ||
+              (userInput != "TOSKE E GEGE PEME NGA NJE DEGE"))
             {
                 errorProvider1.SetError(textBox1, "Përgjigja mungon ose është e pasaktë!");
                 return false;
@@ -70,20 +65,11 @@ namespace Loaj_dhe_Meso
             return true;
         }
 
-
-
-
-
-        private void Med2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitBtn_Click(object sender, EventArgs e)
         {
             string userInput = textBox1.Text.ToUpper();
 
-            if (userInput == "DUAJE ATDHENE SI SHQIPONJA FOLENE")
+            if (userInput == "TOSKE E GEGE PEME NGA NJE DEGE")
             {
                 MessageBox.Show(
                      "Fjala eshte gjetur sakte, kaloni ne nivelin tjeter!",
@@ -94,9 +80,14 @@ namespace Loaj_dhe_Meso
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void answerBtn_Click(object sender, EventArgs e)
         {
             answerLbl.Visible = true;
+        }
+
+        private void Med4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Loaj_dhe_Meso
 {
-    partial class Easy1
+    partial class Easy5
     {
         /// <summary> 
         /// Required designer variable.
@@ -41,34 +41,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(474, 323);
+            this.label3.Location = new System.Drawing.Point(474, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(313, 22);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 11;
             this.label3.Text = "Vendosni fjalën e saktë brenda në kuti!";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Tan;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(507, 360);
+            this.textBox1.Location = new System.Drawing.Point(507, 361);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 30);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 125);
+            this.label2.Location = new System.Drawing.Point(495, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(361, 68);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "TITEDENTI";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Size = new System.Drawing.Size(288, 68);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "ISETERL";
             // 
             // errorProvider1
             // 
@@ -79,26 +76,26 @@
             // 
             this.submitBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitBtn.Location = new System.Drawing.Point(586, 406);
+            this.submitBtn.Location = new System.Drawing.Point(586, 407);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(88, 35);
-            this.submitBtn.TabIndex = 8;
+            this.submitBtn.TabIndex = 12;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = false;
-            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click_1);
             // 
-            // Easy1
+            // Easy5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Name = "Easy1";
+            this.Controls.Add(this.submitBtn);
+            this.Name = "Easy5";
             this.Size = new System.Drawing.Size(1258, 554);
-            this.Load += new System.EventHandler(this.Easy1_Load);
+            this.Load += new System.EventHandler(this.Easy5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,6 +103,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

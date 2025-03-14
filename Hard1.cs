@@ -22,6 +22,11 @@ namespace Loaj_dhe_Meso
         public Hard1()
         {
             InitializeComponent();
+
+
+            toolTip1.SetToolTip(panel1, "Kliko për të lëvizur pjesën");
+
+
             pieces = new PictureBox[,]
             {
         { pictureBox1, pictureBox2, pictureBox3 },
@@ -29,21 +34,27 @@ namespace Loaj_dhe_Meso
         { pictureBox7, pictureBox8, pictureBox9 }
             };
 
-            // Ngarko fotot e ndara manualisht
+           
             images = new List<Image>
-    {
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s1.png"), 
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s2.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s3.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s4.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s5.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s6.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s7.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s8.png"),
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s9.png")
-    };
+{
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s1.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s2.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s3.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s4.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s5.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s6.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s7.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s8.png"),
+    Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s9.png")
+};
 
-            
+            // Shto indeksin real të fotos si tag
+            for (int i = 0; i < images.Count; i++)
+            {
+                images[i].Tag = (i + 1).ToString();
+            }
+
+
             for (int r = 0; r < gridSize; r++)
             {
                 for (int c = 0; c < gridSize; c++)
@@ -62,25 +73,43 @@ namespace Loaj_dhe_Meso
         private void Shuffle()
         {
             Random rnd = new Random();
-            images = images.OrderBy(x => rnd.Next()).ToList();
+            images = images.OrderBy(x => rnd.Next()).ToList(); // Shuflo listën e fotove
 
             int index = 0;
+            StringBuilder initialPositions = new StringBuilder();
+
             for (int r = 0; r < gridSize; r++)
             {
                 for (int c = 0; c < gridSize; c++)
                 {
                     if (r == emptySlot.row && c == emptySlot.col)
                     {
-                        pieces[r, c].Image = null; 
-                        pieces[r, c].Tag = "empty"; 
+                        pieces[r, c].Image = null;
+                        pieces[r, c].Tag = "X";
+                        initialPositions.Append("X ");
                     }
                     else
                     {
                         pieces[r, c].Image = images[index];
-                        pieces[r, c].Tag = (index + 1).ToString();
+
+                      
+                        int imageIndex = int.Parse(images[index].Tag.ToString());
+
+                        pieces[r, c].Tag = imageIndex.ToString(); 
+                        initialPositions.Append(imageIndex + " "); 
+
                         index++;
                     }
                 }
+                initialPositions.AppendLine(); // Shto rresht të ri
+            }
+
+            txtInitialState.Text = initialPositions.ToString();
+
+            if (!IsSolvable())
+            {
+                //MessageBox.Show("Puzzle nuk është i zgjidhshëm. Do të përpiqemi përsëri.");
+                Shuffle();
             }
         }
 
@@ -90,14 +119,14 @@ namespace Loaj_dhe_Meso
             (int r, int c) = GetPiecePosition(clicked);
             if (CanMove(r, c))
             {
-                // Ndërro pjesët
+               
                 pieces[emptySlot.row, emptySlot.col].Image = clicked.Image;
-                pieces[emptySlot.row, emptySlot.col].Tag = clicked.Tag; // Ndërro edhe Tag
+                pieces[emptySlot.row, emptySlot.col].Tag = clicked.Tag; 
                 clicked.Image = null;
                 clicked.Tag = null;
                 emptySlot = (r, c);
 
-                // Kontrollo nëse puzzle është zgjidhur
+                
                 CheckIfSolved();
             }
         }
@@ -125,24 +154,55 @@ namespace Loaj_dhe_Meso
             
         }
 
-
-
-        private void CheckIfSolved()
+        private bool IsSolvable()
         {
-            int correctPieces = 0;
-            PictureBox emptyBox = null;
+            // Krijo një listë të gjithë pjesëve (përjashto boshllëkun)
+            List<int> puzzle = new List<int>();
 
             for (int r = 0; r < gridSize; r++)
             {
                 for (int c = 0; c < gridSize; c++)
                 {
-                    if (pieces[r, c].Tag != null && pieces[r, c].Tag.ToString() == "empty")
+                    if (pieces[r, c].Tag != null && pieces[r, c].Tag.ToString() != "X")
                     {
-                        emptyBox = pieces[r, c]; // Store empty slot for later
+                        puzzle.Add(int.Parse(pieces[r, c].Tag.ToString()));
+                    }
+                }
+            }
+
+            int inversions = 0;
+
+            // Numëro inversimet
+            for (int i = 0; i < puzzle.Count - 1; i++)
+            {
+                for (int j = i + 1; j < puzzle.Count; j++)
+                {
+                    if (puzzle[i] > puzzle[j])
+                    {
+                        inversions++;
+                    }
+                }
+            }
+
+            // Puzzle është i zgjidhshëm nëse numri i inversimeve është çift
+            return inversions % 2 == 0;
+        }
+
+
+
+        private void CheckIfSolved()
+        {
+            int correctPieces = 0;
+
+            for (int r = 0; r < gridSize; r++)
+            {
+                for (int c = 0; c < gridSize; c++)
+                {
+                    if (r == emptySlot.row && c == emptySlot.col)
+                    {
                         continue;
                     }
 
-                    // Ensure Tag is not null before checking its value
                     if (pieces[r, c].Tag != null)
                     {
                         int expectedTag = (r * gridSize + c) + 1;
@@ -154,16 +214,26 @@ namespace Loaj_dhe_Meso
                 }
             }
 
-            // If 8 pieces are correct, auto-fill the last empty slot
-            if (correctPieces == 8 && emptyBox != null)
+           
+            if (correctPieces == 8)
             {
-                emptyBox.Image = images[8]; // Set last image
-                emptyBox.Tag = "9"; // Assign last tag
-
+                pieces[emptySlot.row, emptySlot.col].Image = images[8]; 
+                pieces[emptySlot.row, emptySlot.col].Tag = "9";
 
                 MessageBox.Show("Urime! E zgjidhe puzzle-in!");
             }
 
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string infoMessage = "Ky është një puzzle 3x3. Klikoni në pjesët për t'i lëvizur dhe për të zgjidhur puzzle-in! \n\nKy eshte nje website qe mund te ju ndihmoje per zgjidhjen e ketij puzzle! \n\nanalogbit.com/software/puzzletools/";
+            MessageBox.Show(infoMessage, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

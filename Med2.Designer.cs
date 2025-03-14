@@ -62,7 +62,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(367, 22);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Vendosni fjalen e urte te sakte brenda ne kuti!";
+            this.label3.Text = "Vendosni fjalën e urtë të saktë brenda në kuti!";
             // 
             // textBox1
             // 
@@ -125,7 +125,7 @@
             this.answerBtn.Name = "answerBtn";
             this.answerBtn.Size = new System.Drawing.Size(139, 33);
             this.answerBtn.TabIndex = 17;
-            this.answerBtn.Text = "Shiko pergjigjen";
+            this.answerBtn.Text = "Shiko përgjigjen";
             this.answerBtn.UseVisualStyleBackColor = false;
             this.answerBtn.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -137,7 +137,7 @@
             this.answerLbl.Name = "answerLbl";
             this.answerLbl.Size = new System.Drawing.Size(388, 19);
             this.answerLbl.TabIndex = 18;
-            this.answerLbl.Text = "Pergjigje: DUAJE ATDHENE SI SHQIPONJA FOLENE";
+            this.answerLbl.Text = "Përgjigje: DUAJE ATDHENE SI SHQIPONJA FOLENE";
             this.answerLbl.Visible = false;
             // 
             // Med2

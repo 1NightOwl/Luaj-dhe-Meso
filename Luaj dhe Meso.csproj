@@ -70,6 +70,24 @@
     <Compile Include="Easy3.Designer.cs">
       <DependentUpon>Easy3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Easy4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Easy4.Designer.cs">
+      <DependentUpon>Easy4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Easy5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Easy5.Designer.cs">
+      <DependentUpon>Easy5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="End.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="End.Designer.cs">
+      <DependentUpon>End.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,18 @@
     <Compile Include="Med3.Designer.cs">
       <DependentUpon>Med3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Med4.Designer.cs">
+      <DependentUpon>Med4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Med5.Designer.cs">
+      <DependentUpon>Med5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Medium.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Easy3.resx">
       <DependentUpon>Easy3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Easy4.resx">
+      <DependentUpon>Easy4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Easy5.resx">
+      <DependentUpon>Easy5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="End.resx">
+      <DependentUpon>End.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -162,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Med3.resx">
       <DependentUpon>Med3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med4.resx">
+      <DependentUpon>Med4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med5.resx">
+      <DependentUpon>Med5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medium.resx">
       <DependentUpon>Medium.cs</DependentUpon>
@@ -256,6 +301,7 @@
     <None Include="Resources\s9.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\info.png" />
     <Content Include="Resources\m1.jpg" />
     <Content Include="Resources\m2.jpg" />
     <Content Include="Resources\m3.jpg" />
@@ -265,6 +311,11 @@
     <Content Include="Resources\m7.jpg" />
     <Content Include="Resources\m8.jpg" />
     <Content Include="Resources\m9.jpg" />
+    <None Include="Resources\shqiponja1.jpeg" />
+    <None Include="Resources\med4.png" />
+    <None Include="Resources\med5.1.png" />
+    <None Include="Resources\med5.2.png" />
+    <None Include="Resources\med5.3.png" />
     <Content Include="Resources\shqiponja.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

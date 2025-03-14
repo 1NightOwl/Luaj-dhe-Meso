@@ -63,6 +63,16 @@ namespace Loaj_dhe_Meso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info {
+            get {
+                object obj = ResourceManager.GetObject("info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -173,6 +183,46 @@ namespace Loaj_dhe_Meso.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap med4 {
+            get {
+                object obj = ResourceManager.GetObject("med4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap med5_1 {
+            get {
+                object obj = ResourceManager.GetObject("med5.1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap med5_2 {
+            get {
+                object obj = ResourceManager.GetObject("med5.2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap med5_3 {
+            get {
+                object obj = ResourceManager.GetObject("med5.3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photload {
             get {
                 object obj = ResourceManager.GetObject("photload", resourceCulture);
@@ -276,6 +326,16 @@ namespace Loaj_dhe_Meso.Properties {
         internal static System.Drawing.Bitmap Screenshot_2025_03_12_191146 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-03-12 191146", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shqiponja {
+            get {
+                object obj = ResourceManager.GetObject("shqiponja", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

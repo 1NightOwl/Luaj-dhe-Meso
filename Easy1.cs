@@ -39,7 +39,7 @@ namespace Loaj_dhe_Meso
             }
             else
             {
-                MessageBox.Show("Incorrect answer. Please try again.");
+                MessageBox.Show("Përgjigje e gabuar. Ju lutem provoni përsëri.");
             }
         }
 
@@ -54,7 +54,7 @@ namespace Loaj_dhe_Meso
 
             if (textBox1.Text == null || userInput != "IDENTITET")
             {
-                errorProvider1.SetError(textBox1, "Answer is missing or incorrect!");
+                errorProvider1.SetError(textBox1, "Përgjigja mungon ose është e pasaktë!");
                 return false;
             }
 
