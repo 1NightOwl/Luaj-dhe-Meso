@@ -32,7 +32,7 @@ namespace Loaj_dhe_Meso
             // Ngarko fotot e ndara manualisht
             images = new List<Image>
     {
-        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s1.png"),
+        Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s1.png"), 
         Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s2.png"),
         Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s3.png"),
         Image.FromFile("C:\\Users\\User\\source\\repos\\Loaj dhe Meso\\Resources\\s4.png"),
@@ -64,7 +64,6 @@ namespace Loaj_dhe_Meso
             Random rnd = new Random();
             images = images.OrderBy(x => rnd.Next()).ToList();
 
-            // Vendos fotot e përziera në PictureBox-et
             int index = 0;
             for (int r = 0; r < gridSize; r++)
             {
@@ -72,12 +71,13 @@ namespace Loaj_dhe_Meso
                 {
                     if (r == emptySlot.row && c == emptySlot.col)
                     {
-                        pieces[r, c].Image = null; // Vendos një pjesë bosh
+                        pieces[r, c].Image = null; 
+                        pieces[r, c].Tag = "empty"; 
                     }
                     else
                     {
                         pieces[r, c].Image = images[index];
-                        pieces[r, c].Tag = index + 1; // Cakto një Tag për verifikim
+                        pieces[r, c].Tag = (index + 1).ToString();
                         index++;
                     }
                 }
@@ -129,36 +129,41 @@ namespace Loaj_dhe_Meso
 
         private void CheckIfSolved()
         {
-            int expectedTag = 1;
+            int correctPieces = 0;
+            PictureBox emptyBox = null;
+
             for (int r = 0; r < gridSize; r++)
             {
                 for (int c = 0; c < gridSize; c++)
                 {
-                    
-                    if (r == emptySlot.row && c == emptySlot.col)
+                    if (pieces[r, c].Tag != null && pieces[r, c].Tag.ToString() == "empty")
                     {
-                        
-                        if (r != gridSize - 1 || c != gridSize - 1)
-                            return;
-                    }
-                    else
-                    {
-                        
-                        if (pieces[r, c].Tag?.ToString() != expectedTag.ToString())
-                            return; 
+                        emptyBox = pieces[r, c]; // Store empty slot for later
+                        continue;
                     }
 
-                    expectedTag++;
+                    // Ensure Tag is not null before checking its value
+                    if (pieces[r, c].Tag != null)
+                    {
+                        int expectedTag = (r * gridSize + c) + 1;
+                        if (pieces[r, c].Tag.ToString() == expectedTag.ToString())
+                        {
+                            correctPieces++;
+                        }
+                    }
                 }
             }
 
-            
-            MessageBox.Show("Urime! E zgjidhe puzzle-in!");
+            // If 8 pieces are correct, auto-fill the last empty slot
+            if (correctPieces == 8 && emptyBox != null)
+            {
+                emptyBox.Image = images[8]; // Set last image
+                emptyBox.Tag = "9"; // Assign last tag
+
+
+                MessageBox.Show("Urime! E zgjidhe puzzle-in!");
+            }
+
         }
-
-
-
-
-
     }
 }
