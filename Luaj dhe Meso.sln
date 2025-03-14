@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luaj dhe Meso", "Luaj dhe Meso.csproj", "{5F3DC58E-BEE3-499D-9B27-86A16E3482E3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LuajDheMesoSetup", "..\LuajDheMesoSetup\LuajDheMesoSetup.vdproj", "{81B7FED6-EF52-E1EF-BFA6-6456269DC8B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{5F3DC58E-BEE3-499D-9B27-86A16E3482E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3DC58E-BEE3-499D-9B27-86A16E3482E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3DC58E-BEE3-499D-9B27-86A16E3482E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B7FED6-EF52-E1EF-BFA6-6456269DC8B0}.Debug|Any CPU.ActiveCfg = Debug
+		{81B7FED6-EF52-E1EF-BFA6-6456269DC8B0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
