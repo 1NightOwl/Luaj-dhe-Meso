@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.37663F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.62337F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
@@ -89,7 +89,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 126);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -98,7 +98,7 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(194, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(193, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(197, 126);
             this.pictureBox2.TabIndex = 1;
@@ -108,9 +108,9 @@
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(397, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(396, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(201, 126);
+            this.pictureBox3.Size = new System.Drawing.Size(202, 126);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -120,7 +120,7 @@
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Location = new System.Drawing.Point(3, 135);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(185, 138);
+            this.pictureBox4.Size = new System.Drawing.Size(184, 138);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -128,7 +128,7 @@
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Location = new System.Drawing.Point(194, 135);
+            this.pictureBox5.Location = new System.Drawing.Point(193, 135);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(197, 138);
             this.pictureBox5.TabIndex = 0;
@@ -138,9 +138,9 @@
             // 
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Location = new System.Drawing.Point(397, 135);
+            this.pictureBox6.Location = new System.Drawing.Point(396, 135);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(201, 138);
+            this.pictureBox6.Size = new System.Drawing.Size(202, 138);
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
@@ -150,7 +150,7 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Location = new System.Drawing.Point(3, 279);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(185, 151);
+            this.pictureBox7.Size = new System.Drawing.Size(184, 151);
             this.pictureBox7.TabIndex = 5;
             this.pictureBox7.TabStop = false;
             // 
@@ -158,7 +158,7 @@
             // 
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox8.Location = new System.Drawing.Point(194, 279);
+            this.pictureBox8.Location = new System.Drawing.Point(193, 279);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(197, 151);
             this.pictureBox8.TabIndex = 6;
@@ -168,9 +168,9 @@
             // 
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox9.Location = new System.Drawing.Point(397, 279);
+            this.pictureBox9.Location = new System.Drawing.Point(396, 279);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(201, 151);
+            this.pictureBox9.Size = new System.Drawing.Size(202, 151);
             this.pictureBox9.TabIndex = 7;
             this.pictureBox9.TabStop = false;
             // 
@@ -282,12 +282,12 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtInitialState;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        protected System.Windows.Forms.TextBox txtInitialState;
     }
 }

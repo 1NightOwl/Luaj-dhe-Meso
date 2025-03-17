@@ -37,6 +37,7 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.nextBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.prevBtn = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +101,7 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.LightSalmon;
+            this.panelTitle.Controls.Add(this.prevBtn);
             this.panelTitle.Controls.Add(this.nextBtn);
             this.panelTitle.Controls.Add(this.label1);
             this.panelTitle.Controls.Add(this.button2);
@@ -133,6 +135,20 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Loja e fotove";
             // 
+            // prevBtn
+            // 
+            this.prevBtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.prevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prevBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevBtn.Location = new System.Drawing.Point(918, 69);
+            this.prevBtn.Name = "prevBtn";
+            this.prevBtn.Size = new System.Drawing.Size(144, 35);
+            this.prevBtn.TabIndex = 12;
+            this.prevBtn.Text = "Niveli Mbrapa";
+            this.prevBtn.UseVisualStyleBackColor = false;
+            this.prevBtn.Visible = false;
+            this.prevBtn.Click += new System.EventHandler(this.prevBtn_Click_1);
+            // 
             // Hard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,5 +181,6 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button prevBtn;
     }
 }
